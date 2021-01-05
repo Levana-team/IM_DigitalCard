@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SalesforceAnalytics.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SalesforceSDKCommon.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SalesforceSDKCore.framework

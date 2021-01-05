@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SalesforceAnalytics/SalesforceAnalytics.framework
+${BUILT_PRODUCTS_DIR}/SalesforceSDKCommon/SalesforceSDKCommon.framework
+${BUILT_PRODUCTS_DIR}/SalesforceSDKCore/SalesforceSDKCore.framework

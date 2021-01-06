@@ -38,5 +38,23 @@ public class Translation: NSManagedObject, Codable {
         try container.encode(label, forKey: .label)
         try container.encode(en, forKey: .en)
         try container.encode(fr, forKey: .fr)
-      }
+    }
+    
+    public static func getTranslation(by lang: String) -> [String: String] {
+        let itemFetch = NSFetchRequest<NSFetchRequestResult>(entityName: getEntityName())
+        let context = CoreDataStack.shared.backgroundContext
+        
+        do {
+            let fetchedItems = try context.fetch(itemFetch) as! [Translation]
+            return fetchedItems.reduce([String: String]()) {result, translationItem in
+                var dataResult = result
+                if let translatedValue = translationItem.value(forKey: lang) as? String, let label = translationItem.label{
+                    dataResult[label] = translatedValue
+                }
+               return dataResult
+            }
+        } catch {
+            fatalError("Failed to fetch Story Items: \(error)")
+        }
+    }
 }

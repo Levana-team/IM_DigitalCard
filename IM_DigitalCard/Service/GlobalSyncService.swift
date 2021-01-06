@@ -32,9 +32,12 @@ class GlobalSyncService{
     }
     
     
-    func retrieveData() -> AnyPublisher<[Translation], Error>{
-        return TranslationService.shared.getAllTranslations()
-        //return ConfigService.shared.retrieveConfigValues()
-        
+    func retrieveData() -> AnyPublisher<[Bool], Never>{
+        let pubs = [
+            TranslationService.shared.getAllTranslations().map{ _ in  true}.replaceError(with: true).eraseToAnyPublisher(),
+            
+            ConfigService.shared.retrieveConfigValues().map{ _ in  true}.eraseToAnyPublisher()
+        ]
+        return pubs.publisher.flatMap{ $0 }.collect().eraseToAnyPublisher()
     }
 }

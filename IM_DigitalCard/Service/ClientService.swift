@@ -12,6 +12,12 @@ class ClientService{
     static let shared = ClientService()
     private var disposables = Set<AnyCancellable>()
     
+    func getMyStoreClients() -> AnyPublisher<Bool, Never>{
+        let clientMapping = Mapping.fetchEntityMapping(context: CoreDataStack.shared.backgroundContext, entityMappingNames: ["Account"]) 
+        
+        return NetworkingService.SOQLExecuter(query: "SELECT Id, Name from Account", mapping: clientMapping, [Account].self)
+    }
+    
     func checkDuplicate(clientItem: Client) -> AnyPublisher<Bool, Never>{
         NetworkingService.executeRequestDecodable(restMethod: .POST, wsName: "/client/checkDuplicate", queryParams: nil, body: clientItem)!
             .mapToDictionnary()

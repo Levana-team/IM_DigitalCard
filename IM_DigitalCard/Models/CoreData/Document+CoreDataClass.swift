@@ -44,7 +44,7 @@ public class Document: NSManagedObject {
     }
     
     static func getDocumentUrl(by type: String) -> String? {
-        let itemFetch = NSFetchRequest<NSFetchRequestResult>(entityName: getEntityName())
+        let itemFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
         let context = CoreDataStack.shared.backgroundContext
         
         var subpredicates = [NSPredicate]();

@@ -70,3 +70,33 @@ extension Publisher where Output == RestResponse{
         }
     }
 }
+
+
+extension Publisher where Output == RestResponse{
+    func saveToCoreData<T: Codable>(mapping: [String: String], type: T.Type)
+    -> Publishers.Map<Self, RestResponse>{
+        map{ result -> RestResponse in
+            do {
+                let jsonData = try result.asJson()
+                if let responseData = jsonData as? [String : Any]{
+                    if let records = responseData["records"] as? [[String: AnyObject]]{
+                        let updatedRecords = records.map{ record in
+                            return Utils.mapObject(record: record, mapping: mapping)
+                        }
+                        
+                        let json = try JSONSerialization.data(withJSONObject: updatedRecords)
+                        let decoder = JSONDecoder()
+                        let currentContext = CoreDataStack.shared.backgroundContext
+                        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let items = try decoder.decode(type.self, from: json)
+                        CoreDataStack.shared.save(context: currentContext)
+                    }
+                }
+            } catch{
+                print("Unexpected error: \(error).")
+            }
+            return result
+        }
+    }
+}

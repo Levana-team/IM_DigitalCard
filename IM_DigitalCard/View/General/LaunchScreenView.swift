@@ -12,17 +12,17 @@ struct LaunchScreenView: View {
     @State var openModal = false
     
     var body: some View {
-        ZStack{
-            viewModel.homImage
-                .resizable()
-                .scaledToFill()
-            Text("Hello World")
-            Button("Start", action: {
-                openModal.toggle()
-            })
-        }.fullScreenCover(isPresented: $openModal, content: {
-            NewClientView()
-        })
+        Group{
+            if viewModel.isDataLoaded{
+                TabBarContainerView()
+            }else{
+                ZStack{
+                    viewModel.homeImage
+                        .resizable()
+                        .scaledToFill()
+                }.ignoresSafeArea()
+            }
+        }
     }
 }
 

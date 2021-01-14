@@ -43,6 +43,12 @@
 		16DB0E1A2598BDA1005A4261 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0E192598BDA1005A4261 /* main.swift */; };
 		16F4CF61259DF19500AFB156 /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4CF60259DF19500AFB156 /* FileManagement.swift */; };
 		16F7727D259C6A56005F7248 /* NSManagedObject + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7727C259C6A56005F7248 /* NSManagedObject + helpers.swift */; };
+		4755731925B0236200C22B5A /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731825B0236200C22B5A /* TabBarContainerView.swift */; };
+		4755731F25B0283000C22B5A /* ClientListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731E25B0283000C22B5A /* ClientListViews.swift */; };
+		4755732B25B0440C00C22B5A /* ClientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732A25B0440C00C22B5A /* ClientsViewModel.swift */; };
+		4755732F25B04AB500C22B5A /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732E25B04AB500C22B5A /* FilteredListView.swift */; };
+		477B482825AA627500938A60 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B482625AA627500938A60 /* Account+CoreDataClass.swift */; };
+		47B9721125AB941A002438DA /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
 		BB416018CCB77199A45A722C /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +93,12 @@
 		16F4CF60259DF19500AFB156 /* FileManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagement.swift; sourceTree = "<group>"; };
 		16F7727C259C6A56005F7248 /* NSManagedObject + helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject + helpers.swift"; sourceTree = "<group>"; };
 		2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IM_DigitalCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4755731825B0236200C22B5A /* TabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
+		4755731E25B0283000C22B5A /* ClientListViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViews.swift; sourceTree = "<group>"; };
+		4755732A25B0440C00C22B5A /* ClientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewModel.swift; sourceTree = "<group>"; };
+		4755732E25B04AB500C22B5A /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
+		477B482625AA627500938A60 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapping+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IM_DigitalCard.release.xcconfig"; path = "Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +119,7 @@
 			children = (
 				160D9DA725A3442800E991B7 /* AddressHelper */,
 				160D9DAB25A344E300E991B7 /* SearchBar.swift */,
+				4755732E25B04AB500C22B5A /* FilteredListView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +177,9 @@
 		16BE744825A1190900DF4197 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */,
+				47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */,
+				477B482625AA627500938A60 /* Account+CoreDataClass.swift */,
 				165FFFBE259E0B1D00F68121 /* Document+CoreDataClass.swift */,
 				16D553DA259B374D007686D5 /* Translation+CoreDataClass.swift */,
 			);
@@ -210,6 +226,7 @@
 				160D9DA625A3442100E991B7 /* Utils */,
 				16D553C4259B294D007686D5 /* General */,
 				16BE743B25A0D0F200DF4197 /* NewClient */,
+				4755731B25B027D300C22B5A /* Clients */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				16D553C5259B296D007686D5 /* LaunchScreenView.swift */,
+				4755731825B0236200C22B5A /* TabBarContainerView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -226,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				16D553CA259B297C007686D5 /* General */,
+				4755732825B043EE00C22B5A /* Clients */,
 				16BE744525A1167C00DF4197 /* NewClient */,
 			);
 			path = ViewModel;
@@ -290,7 +309,6 @@
 				16DB0DF32598A34A005A4261 /* ContentView.swift */,
 				16DB0DF82598A34C005A4261 /* Assets.xcassets */,
 				16DB0DFD2598A34C005A4261 /* LaunchScreen.storyboard */,
-				16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */,
 				16DB0DFA2598A34C005A4261 /* Preview Content */,
 			);
 			path = IM_DigitalCard;
@@ -314,6 +332,46 @@
 				16DB0DF12598A34A005A4261 /* SceneDelegate.swift */,
 			);
 			path = setup;
+			sourceTree = "<group>";
+		};
+		4755731B25B027D300C22B5A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				4755731C25B027E600C22B5A /* Views */,
+				4755731D25B027EE00C22B5A /* Items */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		4755731C25B027E600C22B5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4755731E25B0283000C22B5A /* ClientListViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4755731D25B027EE00C22B5A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		4755732825B043EE00C22B5A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				4755732925B043FA00C22B5A /* Views */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		4755732925B043FA00C22B5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4755732A25B0440C00C22B5A /* ClientsViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		728A9FFCE50E08957BDFB8F9 /* Frameworks */ = {
@@ -449,7 +507,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				16BE744225A1167500DF4197 /* NewClientViewModel.swift in Sources */,
+				477B482825AA627500938A60 /* Account+CoreDataClass.swift in Sources */,
 				16D553E1259B5478007686D5 /* CodingUserInfoKey + helpers.swift in Sources */,
+				4755732B25B0440C00C22B5A /* ClientsViewModel.swift in Sources */,
 				16DB0DF72598A34A005A4261 /* IM_DigitalCard.xcdatamodeld in Sources */,
 				16BE744A25A1192A00DF4197 /* Client.swift in Sources */,
 				16BE744D25A1214300DF4197 /* ClientService.swift in Sources */,
@@ -461,10 +521,13 @@
 				16D553BE259B25FD007686D5 /* CoreDataStack.swift in Sources */,
 				160D9DA425A343B700E991B7 /* AddressHelperView.swift in Sources */,
 				16DB0E1A2598BDA1005A4261 /* main.swift in Sources */,
+				47B9721125AB941A002438DA /* Mapping+CoreDataClass.swift in Sources */,
 				16D553AB259B1A76007686D5 /* Utils.swift in Sources */,
 				165FFFC0259E0B1D00F68121 /* Document+CoreDataClass.swift in Sources */,
+				4755731F25B0283000C22B5A /* ClientListViews.swift in Sources */,
 				16DB0DF02598A34A005A4261 /* AppDelegate.swift in Sources */,
 				166A7671259C982B00D0CFA3 /* ConfigService.swift in Sources */,
+				4755732F25B04AB500C22B5A /* FilteredListView.swift in Sources */,
 				16D553C1259B261E007686D5 /* Constants.swift in Sources */,
 				16D553CC259B298C007686D5 /* LaunchScreenViewModel.swift in Sources */,
 				1687C7B825A1D63A0086BA74 /* String + helpers.swift in Sources */,
@@ -477,6 +540,7 @@
 				16F4CF61259DF19500AFB156 /* FileManagement.swift in Sources */,
 				16D553D0259B2E23007686D5 /* Publisher + helpers.swift in Sources */,
 				160D9DA925A3444700E991B7 /* AddressHelperViewModel.swift in Sources */,
+				4755731925B0236200C22B5A /* TabBarContainerView.swift in Sources */,
 				16D553BB259B2257007686D5 /* NetworkingService.swift in Sources */,
 				16D553B2259B1AD4007686D5 /* UserDefaultKey.swift in Sources */,
 				16DB0DF42598A34A005A4261 /* ContentView.swift in Sources */,

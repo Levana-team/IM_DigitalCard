@@ -12,6 +12,50 @@ public class NetworkingService{
     public static let WS_ENDPOINT = Utils.getPlistValue(for: "WebServiceEndPoint") as? String ?? "/services/apexrest/"
     private static var cancellables = Set<AnyCancellable>()
     
+    static func toJson(data: [String: Any]) ->String{
+        let jsonData = try? JSONSerialization.data(withJSONObject: data, options: [])
+        return String(data: jsonData!, encoding: .utf8) ?? ""
+    }
+    
+    public static func SOQLExecuter<U: Codable>(query: String, mapping: [String:String], _: U.Type) -> AnyPublisher<Bool, Never> {
+        func checkNextRecord(_ restResponse: RestResponse) -> String?{
+            do {
+                let responseJson = try restResponse.asJson()
+                if let responseData = responseJson as? [String : Any]{
+                    if let nextRecordsUrl = responseData["nextRecordsUrl"] as? String{
+                        return  nextRecordsUrl
+                    }
+                }
+                return nil
+            } catch {
+                fatalError("Failed to fetch tasks:")
+            }
+        }
+        
+        func loadPage(request: RestRequest) -> AnyPublisher<RestResponse, RestClientError> {
+            RestClient.shared.publisher(for: request)
+                .saveToCoreData(mapping: mapping, type: U.self)
+                .eraseToAnyPublisher()
+        }
+        
+        let request = RestClient.shared.request(forQuery: query, apiVersion: SFRestDefaultAPIVersion)
+        let pageIndexPublisher = CurrentValueSubject<RestRequest, Never>(request)
+
+        return pageIndexPublisher
+            .flatMap({ restRequest in
+                return loadPage(request: restRequest)
+            })
+            .handleEvents(receiveOutput: { (response: RestResponse) in
+                if let nextRecordsUrl = checkNextRecord(response){
+                    let request = RestRequest(method: .GET, path: nextRecordsUrl, queryParams: nil)
+                    pageIndexPublisher.send(request)
+                }else{
+                    pageIndexPublisher.send(completion: .finished)
+                }
+            })
+            .map{ _ in true}.replaceError(with: true).eraseToAnyPublisher()
+    }
+    
     public static func executeRequestDecodable<U: Codable>(restMethod: RestRequest.Method, wsName :String, queryParams:[String: String]?, body: U?) ->AnyPublisher<RestResponse, RestClientError>?{
         
         do {
@@ -48,7 +92,7 @@ public class NetworkingService{
     }
     
     
-    public static func executeQueryPublisher(query: String) ->AnyPublisher<RestResponse, RestClientError>{
+    public static func executeQueryPublisher(query: String) -> AnyPublisher<RestResponse, RestClientError>{
         let request = RestClient.shared.request(forQuery: query, apiVersion: nil)
         let requestPublisher = CurrentValueSubject<RestRequest, RestClientError>(request)
 

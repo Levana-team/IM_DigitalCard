@@ -11,17 +11,17 @@ import SwiftUI
 class LaunchScreenViewModel: ObservableObject{
     private var disposables = Set<AnyCancellable>()
     
-    @Published var isLoaded: Bool = false
+    @Published var isDataLoaded: Bool = false
     
     init(){
         if GlobalSyncService.shared.needToPerformSync(){
             GlobalSyncService.shared.retrieveData().sink(receiveCompletion: { _ in}, receiveValue: { items in
-               print(items)
+                self.isDataLoaded = true
             }).store(in: &disposables)
         }
     }
     
-    var homImage: Image{
+    var homeImage: Image{
         if let docUrl = Document.getDocumentUrl(by: "Home"), let homeImg = FileManagement.sharedInstance.getImageFromDirectory(docUrl){
             return homeImg
         }

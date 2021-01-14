@@ -50,6 +50,7 @@ class ConfigService{
             }
         }
         
+        
         if let documents = response["documents"] as? [[String : AnyObject]] {
             let context = CoreDataStack.shared.backgroundContext
             for document in documents{
@@ -66,12 +67,21 @@ class ConfigService{
             
         }
         
-        /*
+        
          if let mappings = response["mappings"] as? [[String : AnyObject]] {
-             Mapping.Upsert(mappings,
-                            deleteAllNotIn: true)
+            do {
+                let json = try JSONSerialization.data(withJSONObject: mappings)
+                let decoder = JSONDecoder()
+                let currentContext = CoreDataStack.shared.backgroundContext
+                decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let _ = try decoder.decode([Mapping].self, from: json)
+                CoreDataStack.shared.save(context: currentContext)
+            } catch {
+                print(error)
+            }
          }
-         
+         /*
          if let queries = response["queries"] as? [[String : AnyObject]] {
              Query.Upsert(queries,
                             deleteAllNotIn: true)

@@ -76,7 +76,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    func setupRootViewController() {
     // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
     // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-    let contentView = LaunchScreenView()//.environment(\.managedObjectContext, context)
+    
+    let contentView = LaunchScreenView().environment(\.managedObjectContext, CoreDataStack.shared.viewContext)
     
        self.window?.rootViewController = UIHostingController(
            rootView: contentView

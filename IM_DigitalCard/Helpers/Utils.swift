@@ -14,4 +14,18 @@ public class Utils{
         }
         return infoPlist[key]
     }
+    
+    public static func mapObject(record: [String: AnyObject], mapping: [String:String]) -> [String: AnyObject]{
+        let mappedRecord = record.reduce([String: AnyObject](), { result, item in
+            var resultData = result
+            
+            if let key = mapping[item.key]{
+                resultData[key] = item.value
+            }
+            return resultData
+        })
+        
+        print(mappedRecord)
+        return mappedRecord
+    }
 }

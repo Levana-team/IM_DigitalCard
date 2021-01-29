@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class ClientsViewModel: ObservableObject{
+class ClientsFetchViewModel: ObservableObject{
     @Published var fetchRequest: FetchRequest<Account>
     
     init(){

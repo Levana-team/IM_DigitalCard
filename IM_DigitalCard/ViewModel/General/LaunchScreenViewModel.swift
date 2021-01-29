@@ -15,7 +15,8 @@ class LaunchScreenViewModel: ObservableObject{
     
     init(){
         if GlobalSyncService.shared.needToPerformSync(){
-            GlobalSyncService.shared.retrieveData().sink(receiveCompletion: { _ in}, receiveValue: { items in
+            GlobalSyncService.shared.retrieveData()
+            .sink(receiveCompletion: { _ in}, receiveValue: { items in
                 self.isDataLoaded = true
             }).store(in: &disposables)
         }

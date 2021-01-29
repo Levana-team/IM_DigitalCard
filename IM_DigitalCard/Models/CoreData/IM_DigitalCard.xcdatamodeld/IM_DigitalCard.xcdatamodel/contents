@@ -4,6 +4,20 @@
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
+        <relationship name="clientLists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClientList" inverseName="clients" inverseEntity="ClientList"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="ClientList" representedClassName="ClientList" syncable="YES" codeGenerationType="category">
+        <attribute name="descriptionText" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="query" optional="YES" attributeType="String"/>
+        <relationship name="clients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="clientLists" inverseEntity="Account"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -33,6 +47,15 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="Queries" representedClassName="Queries" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="query" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Translation" representedClassName="Translation" syncable="YES" codeGenerationType="category">
         <attribute name="en" optional="YES" attributeType="String"/>
         <attribute name="fr" optional="YES" attributeType="String"/>
@@ -44,9 +67,11 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="27" width="128" height="74"/>
+        <element name="Account" positionX="-63" positionY="27" width="128" height="89"/>
+        <element name="ClientList" positionX="-63" positionY="45" width="128" height="119"/>
         <element name="Document" positionX="-63" positionY="9" width="128" height="89"/>
-        <element name="Translation" positionX="-63" positionY="-18" width="128" height="74"/>
         <element name="Mapping" positionX="-63" positionY="27" width="128" height="104"/>
+        <element name="Queries" positionX="-63" positionY="45" width="128" height="59"/>
+        <element name="Translation" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

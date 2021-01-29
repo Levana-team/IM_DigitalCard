@@ -16,7 +16,6 @@ class ConfigService{
         return NetworkingService.executeRequest(restMethod: .GET, wsName: "/setup?app=digitalCard", queryParams: nil, body: nil)
             .mapToDictionnary()
             .map{ response -> Bool in
-                print(response)
                 self.saveConfigItems(response: response)
                 return true
             }
@@ -64,23 +63,16 @@ class ConfigService{
                     }
                 }
             }
-            
         }
         
         
          if let mappings = response["mappings"] as? [[String : AnyObject]] {
-            do {
-                let json = try JSONSerialization.data(withJSONObject: mappings)
-                let decoder = JSONDecoder()
-                let currentContext = CoreDataStack.shared.backgroundContext
-                decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let _ = try decoder.decode([Mapping].self, from: json)
-                CoreDataStack.shared.save(context: currentContext)
-            } catch {
-                print(error)
-            }
+            CoreDataUtils.shared.saveToCoredata(data: mappings, type: [Mapping].self)
          }
+        
+        if let queries = response["queries"] as? [[String : AnyObject]] {
+            CoreDataUtils.shared.saveToCoredata(data: queries, type: [Queries].self)
+        }
          /*
          if let queries = response["queries"] as? [[String : AnyObject]] {
              Query.Upsert(queries,

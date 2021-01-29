@@ -7,6 +7,7 @@
 
 import Combine
 import SalesforceSDKCore
+import CoreData
 
 public class NetworkingService{
     public static let WS_ENDPOINT = Utils.getPlistValue(for: "WebServiceEndPoint") as? String ?? "/services/apexrest/"
@@ -17,7 +18,10 @@ public class NetworkingService{
         return String(data: jsonData!, encoding: .utf8) ?? ""
     }
     
-    public static func SOQLExecuter<U: Codable>(query: String, mapping: [String:String], _: U.Type) -> AnyPublisher<Bool, Never> {
+    public static func SOQLExecuter<U: Codable>(query: String,
+                                                mapping: [String:String],
+                                                _: U.Type,
+                                                onBeforeSave: ((_ items: Set<NSManagedObject>, _ context: NSManagedObjectContext) -> Void)? = nil) -> AnyPublisher<Bool, Never> {
         func checkNextRecord(_ restResponse: RestResponse) -> String?{
             do {
                 let responseJson = try restResponse.asJson()
@@ -34,7 +38,7 @@ public class NetworkingService{
         
         func loadPage(request: RestRequest) -> AnyPublisher<RestResponse, RestClientError> {
             RestClient.shared.publisher(for: request)
-                .saveToCoreData(mapping: mapping, type: U.self)
+                .saveToCoreData(mapping: mapping, type: U.self, onBeforeSave: onBeforeSave)
                 .eraseToAnyPublisher()
         }
         

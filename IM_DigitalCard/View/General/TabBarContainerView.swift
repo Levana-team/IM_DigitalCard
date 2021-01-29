@@ -11,10 +11,24 @@ struct TabBarContainerView: View {
     var body: some View {
         TabView {
             NavigationView{
+                NewClientView()
+            }.tabItem {
+                Image(systemName: "phone.fill")
+                Text("New Client")
+            }
+            
+            NavigationView{
                 ClientListViews()
             }.tabItem {
                 Image(systemName: "phone.fill")
                 Text("Client")
+            }
+            
+            NavigationView{
+                ClientListsView()
+            }.tabItem {
+                Image(systemName: "phone.fill")
+                Text("Client List")
             }
         }
     }

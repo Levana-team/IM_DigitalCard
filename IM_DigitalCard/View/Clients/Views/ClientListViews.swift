@@ -16,7 +16,7 @@ struct ClientListViews: View {
             FilteredListView(searchText: searchText,
                             sortDescriptors: [NSSortDescriptor(key: "lastName", ascending: true)],
                             predicate: Account.getSearchClientsPredicate(by: searchText)){ (client: Account) in
-                Text(client.lastName ?? "")
+                ClientView(clientView: ClientViewModel(client: client))
             }
         }
         

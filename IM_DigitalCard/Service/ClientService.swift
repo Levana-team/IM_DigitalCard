@@ -13,9 +13,10 @@ class ClientService{
     private var disposables = Set<AnyCancellable>()
     
     func getMyStoreClients() -> AnyPublisher<Bool, Never>{
-        let clientMapping = Mapping.fetchEntityMapping(context: CoreDataStack.shared.backgroundContext, entityMappingNames: ["Account"]) 
+        let clientQuery = SOQLQueries.getMyStoreClients(fromDate: nil)
+        let clientMapping = Mapping.fetchEntityMapping(context: CoreDataStack.shared.backgroundContext, entityMappingNames: ["Account"])
         
-        return NetworkingService.SOQLExecuter(query: "SELECT Id, Name from Account", mapping: clientMapping, [Account].self)
+        return NetworkingService.SOQLExecuter(query: clientQuery, mapping: clientMapping, [Account].self)
     }
     
     func checkDuplicate(clientItem: Client) -> AnyPublisher<Bool, Never>{

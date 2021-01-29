@@ -24,4 +24,34 @@ extension NSManagedObject{
             // Error Handling
         }
     }
+    
+    static func getRecords(by ids:[String]? = nil, sortDescriptors:[(key:String, ascending:Bool)]? = nil) -> [NSManagedObject]?{
+        let context = CoreDataStack.shared.viewContext
+        let templatetFetch = NSFetchRequest<NSFetchRequestResult>(entityName: getEntityName())
+        
+        if let ids = ids{
+            let pred = NSPredicate(format: "id IN %@",ids)
+            templatetFetch.predicate = pred
+        }
+        
+        if let sortDescriptors = sortDescriptors{
+            var sortBy = [NSSortDescriptor]()
+            
+            for sortItem in sortDescriptors{
+                sortBy.append(NSSortDescriptor(key: sortItem.key, ascending: sortItem.ascending))
+            }
+            templatetFetch.sortDescriptors = sortBy
+        }
+        
+        do {
+            let fetchedRecords = try context.fetch(templatetFetch) as! [NSManagedObject]
+            if fetchedRecords.count > 0{
+                return fetchedRecords
+            }
+            return nil
+        } catch {
+            fatalError("Failed to fetch record: \(error)")
+        }
+        return nil
+    }
 }

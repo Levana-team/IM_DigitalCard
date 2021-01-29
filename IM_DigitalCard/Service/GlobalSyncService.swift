@@ -33,11 +33,11 @@ class GlobalSyncService{
     
     
     func retrieveData() -> AnyPublisher<Bool, Never>{
-        
         func retrieveInnerData() -> AnyPublisher<Bool, Never>{
             let pubs = [
                 TranslationService.shared.getAllTranslations().map{ _ in  true}.replaceError(with: true).eraseToAnyPublisher(),
-                ClientService.shared.getMyStoreClients().map{ _ in  true}.replaceError(with: true).eraseToAnyPublisher()
+                ClientService.shared.getMyStoreClients().map{ _ in  true}.replaceError(with: true).eraseToAnyPublisher(),
+                ClientListService.shared.getClientList().map{ _ in  true}.replaceError(with: true).eraseToAnyPublisher()
             ]
             return pubs.publisher.flatMap{ $0 }.collect().map{ _ in  true}.eraseToAnyPublisher()
         }

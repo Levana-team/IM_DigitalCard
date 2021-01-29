@@ -45,9 +45,23 @@
 		16F7727D259C6A56005F7248 /* NSManagedObject + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7727C259C6A56005F7248 /* NSManagedObject + helpers.swift */; };
 		4755731925B0236200C22B5A /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731825B0236200C22B5A /* TabBarContainerView.swift */; };
 		4755731F25B0283000C22B5A /* ClientListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731E25B0283000C22B5A /* ClientListViews.swift */; };
-		4755732B25B0440C00C22B5A /* ClientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732A25B0440C00C22B5A /* ClientsViewModel.swift */; };
+		4755732B25B0440C00C22B5A /* ClientsFetchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732A25B0440C00C22B5A /* ClientsFetchViewModel.swift */; };
 		4755732F25B04AB500C22B5A /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732E25B04AB500C22B5A /* FilteredListView.swift */; };
+		4755736E25B0E75200C22B5A /* Queries+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755736C25B0E75200C22B5A /* Queries+CoreDataClass.swift */; };
+		4755737425B0E93300C22B5A /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737325B0E93300C22B5A /* CoreDataUtils.swift */; };
+		4755737A25B0EE7B00C22B5A /* SOQLQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737925B0EE7B00C22B5A /* SOQLQueries.swift */; };
+		47625D5B25B5DC6A001ECB3B /* ClientListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5A25B5DC6A001ECB3B /* ClientListsViewModel.swift */; };
+		47625D5F25B5E17D001ECB3B /* ClientListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5E25B5E17D001ECB3B /* ClientListsView.swift */; };
+		476C7C8F25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C8E25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift */; };
+		476C7C9225B703340080D032 /* ClientSegmentationItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9125B703340080D032 /* ClientSegmentationItemsView.swift */; };
+		476C7C9E25B756260080D032 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9D25B756260080D032 /* ClientViewModel.swift */; };
+		476C7CA125B757920080D032 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA025B757920080D032 /* ClientView.swift */; };
+		476C7CA725B789240080D032 /* ClientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA625B789240080D032 /* ClientDetailView.swift */; };
+		477B47C525B34CB20054C8F8 /* ClientListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C425B34CB20054C8F8 /* ClientListService.swift */; };
+		477B47C925B3631F0054C8F8 /* ClientList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C725B3631F0054C8F8 /* ClientList+CoreDataClass.swift */; };
 		477B482825AA627500938A60 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B482625AA627500938A60 /* Account+CoreDataClass.swift */; };
+		479E3F2325B85AEE00994F8B /* ClientSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */; };
+		479E3F2725B85B1B00994F8B /* ClientSegmentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */; };
 		47B9721125AB941A002438DA /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
 		BB416018CCB77199A45A722C /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
 /* End PBXBuildFile section */
@@ -95,9 +109,23 @@
 		2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IM_DigitalCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4755731825B0236200C22B5A /* TabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
 		4755731E25B0283000C22B5A /* ClientListViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViews.swift; sourceTree = "<group>"; };
-		4755732A25B0440C00C22B5A /* ClientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewModel.swift; sourceTree = "<group>"; };
+		4755732A25B0440C00C22B5A /* ClientsFetchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsFetchViewModel.swift; sourceTree = "<group>"; };
 		4755732E25B04AB500C22B5A /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
+		4755736C25B0E75200C22B5A /* Queries+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Queries+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4755737325B0E93300C22B5A /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		4755737925B0EE7B00C22B5A /* SOQLQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOQLQueries.swift; sourceTree = "<group>"; };
+		47625D5A25B5DC6A001ECB3B /* ClientListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListsViewModel.swift; sourceTree = "<group>"; };
+		47625D5E25B5E17D001ECB3B /* ClientListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListsView.swift; sourceTree = "<group>"; };
+		476C7C8E25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationItemsViewModel.swift; sourceTree = "<group>"; };
+		476C7C9125B703340080D032 /* ClientSegmentationItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationItemsView.swift; sourceTree = "<group>"; };
+		476C7C9D25B756260080D032 /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
+		476C7CA025B757920080D032 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		476C7CA625B789240080D032 /* ClientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailView.swift; sourceTree = "<group>"; };
+		477B47C425B34CB20054C8F8 /* ClientListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListService.swift; sourceTree = "<group>"; };
+		477B47C725B3631F0054C8F8 /* ClientList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClientList+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		477B482625AA627500938A60 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationView.swift; sourceTree = "<group>"; };
+		479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationViewModel.swift; sourceTree = "<group>"; };
 		47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapping+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IM_DigitalCard.release.xcconfig"; path = "Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,11 +205,13 @@
 		16BE744825A1190900DF4197 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */,
+				477B47C725B3631F0054C8F8 /* ClientList+CoreDataClass.swift */,
+				4755736C25B0E75200C22B5A /* Queries+CoreDataClass.swift */,
 				47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */,
 				477B482625AA627500938A60 /* Account+CoreDataClass.swift */,
 				165FFFBE259E0B1D00F68121 /* Document+CoreDataClass.swift */,
 				16D553DA259B374D007686D5 /* Translation+CoreDataClass.swift */,
+				16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -193,6 +223,7 @@
 				16D553B7259B21B8007686D5 /* TranslationService.swift */,
 				166A7670259C982B00D0CFA3 /* ConfigService.swift */,
 				16BE744C25A1214300DF4197 /* ClientService.swift */,
+				477B47C425B34CB20054C8F8 /* ClientListService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,6 +238,8 @@
 				16D553BA259B2257007686D5 /* NetworkingService.swift */,
 				16D553BD259B25FD007686D5 /* CoreDataStack.swift */,
 				16F4CF60259DF19500AFB156 /* FileManagement.swift */,
+				4755737325B0E93300C22B5A /* CoreDataUtils.swift */,
+				4755737925B0EE7B00C22B5A /* SOQLQueries.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,7 +259,9 @@
 				160D9DA625A3442100E991B7 /* Utils */,
 				16D553C4259B294D007686D5 /* General */,
 				16BE743B25A0D0F200DF4197 /* NewClient */,
+				47625D5525B5DBF7001ECB3B /* ClientSegmentation */,
 				4755731B25B027D300C22B5A /* Clients */,
+				476C7CA325B788E80080D032 /* ClientDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				16D553CA259B297C007686D5 /* General */,
+				47625D5825B5DC2C001ECB3B /* ClientSegmentation */,
 				4755732825B043EE00C22B5A /* Clients */,
 				16BE744525A1167C00DF4197 /* NewClient */,
 			);
@@ -354,6 +390,7 @@
 		4755731D25B027EE00C22B5A /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				476C7CA025B757920080D032 /* ClientView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -369,9 +406,86 @@
 		4755732925B043FA00C22B5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4755732A25B0440C00C22B5A /* ClientsViewModel.swift */,
+				4755732A25B0440C00C22B5A /* ClientsFetchViewModel.swift */,
+				476C7C9D25B756260080D032 /* ClientViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		47625D5525B5DBF7001ECB3B /* ClientSegmentation */ = {
+			isa = PBXGroup;
+			children = (
+				47625D5625B5DC08001ECB3B /* Views */,
+				47625D5725B5DC0D001ECB3B /* Items */,
+			);
+			path = ClientSegmentation;
+			sourceTree = "<group>";
+		};
+		47625D5625B5DC08001ECB3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47625D5E25B5E17D001ECB3B /* ClientListsView.swift */,
+				476C7C9125B703340080D032 /* ClientSegmentationItemsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47625D5725B5DC0D001ECB3B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		47625D5825B5DC2C001ECB3B /* ClientSegmentation */ = {
+			isa = PBXGroup;
+			children = (
+				47625D5925B5DC38001ECB3B /* Views */,
+				479E3F2525B85B0800994F8B /* Items */,
+			);
+			path = ClientSegmentation;
+			sourceTree = "<group>";
+		};
+		47625D5925B5DC38001ECB3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47625D5A25B5DC6A001ECB3B /* ClientListsViewModel.swift */,
+				476C7C8E25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		476C7CA325B788E80080D032 /* ClientDetail */ = {
+			isa = PBXGroup;
+			children = (
+				476C7CA425B789020080D032 /* Views */,
+				476C7CA525B789090080D032 /* Items */,
+			);
+			path = ClientDetail;
+			sourceTree = "<group>";
+		};
+		476C7CA425B789020080D032 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				476C7CA625B789240080D032 /* ClientDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		476C7CA525B789090080D032 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		479E3F2525B85B0800994F8B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		728A9FFCE50E08957BDFB8F9 /* Frameworks */ = {
@@ -506,18 +620,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479E3F2325B85AEE00994F8B /* ClientSegmentationView.swift in Sources */,
+				476C7CA125B757920080D032 /* ClientView.swift in Sources */,
 				16BE744225A1167500DF4197 /* NewClientViewModel.swift in Sources */,
 				477B482825AA627500938A60 /* Account+CoreDataClass.swift in Sources */,
 				16D553E1259B5478007686D5 /* CodingUserInfoKey + helpers.swift in Sources */,
-				4755732B25B0440C00C22B5A /* ClientsViewModel.swift in Sources */,
+				4755732B25B0440C00C22B5A /* ClientsFetchViewModel.swift in Sources */,
 				16DB0DF72598A34A005A4261 /* IM_DigitalCard.xcdatamodeld in Sources */,
+				479E3F2725B85B1B00994F8B /* ClientSegmentationViewModel.swift in Sources */,
 				16BE744A25A1192A00DF4197 /* Client.swift in Sources */,
+				4755737A25B0EE7B00C22B5A /* SOQLQueries.swift in Sources */,
 				16BE744D25A1214300DF4197 /* ClientService.swift in Sources */,
 				16D553DC259B374D007686D5 /* Translation+CoreDataClass.swift in Sources */,
 				16BE743F25A0D13F00DF4197 /* NewClientView.swift in Sources */,
 				1687C7BC25A203C40086BA74 /* DrawingView.swift in Sources */,
 				16D553B8259B21B8007686D5 /* TranslationService.swift in Sources */,
+				477B47C525B34CB20054C8F8 /* ClientListService.swift in Sources */,
 				16D553A7259B1A22007686D5 /* GlobalSyncService.swift in Sources */,
+				47625D5F25B5E17D001ECB3B /* ClientListsView.swift in Sources */,
+				476C7CA725B789240080D032 /* ClientDetailView.swift in Sources */,
 				16D553BE259B25FD007686D5 /* CoreDataStack.swift in Sources */,
 				160D9DA425A343B700E991B7 /* AddressHelperView.swift in Sources */,
 				16DB0E1A2598BDA1005A4261 /* main.swift in Sources */,
@@ -528,6 +649,7 @@
 				16DB0DF02598A34A005A4261 /* AppDelegate.swift in Sources */,
 				166A7671259C982B00D0CFA3 /* ConfigService.swift in Sources */,
 				4755732F25B04AB500C22B5A /* FilteredListView.swift in Sources */,
+				476C7C9225B703340080D032 /* ClientSegmentationItemsView.swift in Sources */,
 				16D553C1259B261E007686D5 /* Constants.swift in Sources */,
 				16D553CC259B298C007686D5 /* LaunchScreenViewModel.swift in Sources */,
 				1687C7B825A1D63A0086BA74 /* String + helpers.swift in Sources */,
@@ -535,14 +657,20 @@
 				160D9DAC25A344E300E991B7 /* SearchBar.swift in Sources */,
 				16F7727D259C6A56005F7248 /* NSManagedObject + helpers.swift in Sources */,
 				1687C7C025A204EB0086BA74 /* SignatureView.swift in Sources */,
+				4755736E25B0E75200C22B5A /* Queries+CoreDataClass.swift in Sources */,
 				16D553C6259B296D007686D5 /* LaunchScreenView.swift in Sources */,
 				16D553AE259B1A97007686D5 /* UserDefaultUtils.swift in Sources */,
 				16F4CF61259DF19500AFB156 /* FileManagement.swift in Sources */,
+				47625D5B25B5DC6A001ECB3B /* ClientListsViewModel.swift in Sources */,
 				16D553D0259B2E23007686D5 /* Publisher + helpers.swift in Sources */,
+				4755737425B0E93300C22B5A /* CoreDataUtils.swift in Sources */,
 				160D9DA925A3444700E991B7 /* AddressHelperViewModel.swift in Sources */,
+				476C7C8F25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift in Sources */,
 				4755731925B0236200C22B5A /* TabBarContainerView.swift in Sources */,
+				476C7C9E25B756260080D032 /* ClientViewModel.swift in Sources */,
 				16D553BB259B2257007686D5 /* NetworkingService.swift in Sources */,
 				16D553B2259B1AD4007686D5 /* UserDefaultKey.swift in Sources */,
+				477B47C925B3631F0054C8F8 /* ClientList+CoreDataClass.swift in Sources */,
 				16DB0DF42598A34A005A4261 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

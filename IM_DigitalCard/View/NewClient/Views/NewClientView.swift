@@ -11,7 +11,7 @@ struct NewClientView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = NewClientViewModel()
     
-    var body: some View {
+     var body: some View {
         NavigationView{
             VStack{
             
@@ -27,7 +27,7 @@ struct NewClientView: View {
                     TextField("Country", text: $viewModel.clientItem.country)
                 }
                 SignatureView(signatureImage: $viewModel.signatureImage)
-                    .background(Color.red)
+                    .background(Color.yellow)
                 
                 Button("Check Duplicate", action: {
                     if validateForm(){

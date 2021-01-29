@@ -13,7 +13,7 @@ class TranslationService{
     static let shared = TranslationService()
     var cancellable: Cancellable?
     
-    func getAllTranslations() -> AnyPublisher<[Translation], Error>{
+    func getAllTranslations() -> AnyPublisher<RestResponse, Error>{
         
         let decoder = JSONDecoder()
         let currentContext = CoreDataStack.shared.backgroundContext
@@ -22,7 +22,7 @@ class TranslationService{
         Translation.emptyEntity()
         return NetworkingService.executeRequest(restMethod: .GET, wsName: "/translation?app=digitalCard")
             .receive(on: RunLoop.main)
-            .saveToCoreData()
+            .saveToCoreData(type: [Translation].self)
             .eraseToAnyPublisher()
     }
 }

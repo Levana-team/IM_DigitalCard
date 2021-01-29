@@ -7,6 +7,7 @@
 
 import Combine
 import SalesforceSDKCore
+import CoreData
 
 extension Publisher where Output == RestResponse{
   func mapToList()
@@ -55,25 +56,29 @@ extension Publisher where Output == RestResponse{
 }
 
 extension Publisher where Output == RestResponse{
-    func saveToCoreData<T: Codable>()
-    -> Publishers.TryMap<Self, T>{
-        tryMap{ result -> T in
+    func saveToCoreData<T: Codable>(type: T.Type)
+    -> Publishers.TryMap<Self, RestResponse>{
+        tryMap{ result -> RestResponse in
             
+            let backgroundContext = CoreDataStack.shared.backgroundContext
             let decoder = JSONDecoder()
-            let currentContext = CoreDataStack.shared.backgroundContext
-            decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            decoder.userInfo[.managedObjectContext] = backgroundContext
             
             let value = try decoder.decode(T.self, from: result.asData())
-            CoreDataStack.shared.save(context: currentContext)
             
-            return value
+            try backgroundContext.save()
+            
+            return result
         }
     }
 }
 
 
 extension Publisher where Output == RestResponse{
-    func saveToCoreData<T: Codable>(mapping: [String: String], type: T.Type)
+    func saveToCoreData<T: Codable>(mapping: [String: String],
+                                    type: T.Type,
+                                    onBeforeSave: ((_ items: Set<NSManagedObject>, _ context: NSManagedObjectContext) -> Void)? = nil)
     -> Publishers.Map<Self, RestResponse>{
         map{ result -> RestResponse in
             do {
@@ -86,11 +91,14 @@ extension Publisher where Output == RestResponse{
                         
                         let json = try JSONSerialization.data(withJSONObject: updatedRecords)
                         let decoder = JSONDecoder()
-                        let currentContext = CoreDataStack.shared.backgroundContext
-                        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
+                        let backgroundContext = CoreDataStack.shared.backgroundContext
+                        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = backgroundContext
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let items = try decoder.decode(type.self, from: json)
-                        CoreDataStack.shared.save(context: currentContext)
+                        if let onBeforeSave = onBeforeSave{
+                            onBeforeSave(items as! Set<NSManagedObject>, backgroundContext)
+                        }
+                        try backgroundContext.save()
                     }
                 }
             } catch{

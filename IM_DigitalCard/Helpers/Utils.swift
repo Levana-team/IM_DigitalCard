@@ -25,7 +25,6 @@ public class Utils{
             return resultData
         })
         
-        print(mappedRecord)
         return mappedRecord
     }
 }

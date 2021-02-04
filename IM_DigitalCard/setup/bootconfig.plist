@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>remoteAccessConsumerKey</key>
-	<string>3MVG9tzQRhEbH_K1kVOVYiO6myyo17mmxdtK7.Ce1Xz7P43_2UMJ8DZvjrffS_l18p.eViaTKQUSFSyQV_iry</string>
+	<string>3MVG9OjW2TAjFKUuRe.bbShevC5b1zWszKBsKS4xgC2JsKcEBbGfgArjkVs0Mi3PKEnW088EHp_opoVdYKEXT</string>
 	<key>oauthRedirectURI</key>
 	<string>sfdc://oauth/success</string>
 	<key>oauthScopes</key>

@@ -11,8 +11,8 @@ struct ClientSegmentationItemsView: View {
     @StateObject var viewModel: ClientSegmentationItemsViewModel
     @State var searchText = ""
     
-    init(clientList: ClientList){
-        _viewModel = StateObject(wrappedValue: ClientSegmentationItemsViewModel(clientList: clientList));
+    init(clientSegmentationItem: ClientSegmentationViewModel){
+        _viewModel = StateObject(wrappedValue: ClientSegmentationItemsViewModel(clientSegmentationItem: clientSegmentationItem));
     }
     
     var body: some View {
@@ -20,7 +20,7 @@ struct ClientSegmentationItemsView: View {
             TextField("seachBar", text: $searchText)
             FilteredListView(searchText: searchText,
                             sortDescriptors: [NSSortDescriptor(key: "lastName", ascending: true)],
-                            predicate: ClientList.getClientsPredicate(clientList: viewModel.clientListItem, searchText: searchText)){ (client: Account) in
+                            predicate: ClientList.getClientsPredicate(clientList: viewModel.clientSegmentationItem.clientSegmentation, searchText: searchText)){ (client: Account) in
                 ClientView(clientView: ClientViewModel(client: client))
             }
         }
@@ -30,6 +30,6 @@ struct ClientSegmentationItemsView: View {
 
 struct ClientSegmentationItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        ClientSegmentationItemsView(clientList: ClientList())
+        ClientSegmentationItemsView(clientSegmentationItem: ClientSegmentationViewModel(clientList: ClientList()))
     }
 }

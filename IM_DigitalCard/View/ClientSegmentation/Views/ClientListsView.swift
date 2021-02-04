@@ -12,11 +12,9 @@ struct ClientListsView: View {
     
     var body: some View {
         VStack{
-            ForEach(viewModel.clientListItems) { (clientList: ClientList) in
-                NavigationLink(destination: ClientSegmentationItemsView(clientList: clientList)) {
-                    VStack{
-                        Text(clientList.name ?? "")
-                    }.frame(height: 40)
+            ForEach(viewModel.clientSegmentationItems, id: \.id) { clientSegmentationItem in
+                NavigationLink(destination: ClientSegmentationItemsView(clientSegmentationItem: clientSegmentationItem)) {
+                    ClientSegmentationView(clientSegmentationItem: clientSegmentationItem)
                 }
             }
         }

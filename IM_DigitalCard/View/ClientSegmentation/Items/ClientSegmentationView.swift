@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ClientSegmentationView: View {
+    var clientSegmentationItem: ClientSegmentationViewModel
+    
     var body: some View {
         VStack{
-            Text("My Client")
+            Text(clientSegmentationItem.name)
         }
     }
 }
 
 struct ClientSegmentationView_Previews: PreviewProvider {
     static var previews: some View {
-        ClientSegmentationView()
+        ClientSegmentationView(clientSegmentationItem: ClientSegmentationViewModel(clientList: ClientList()))
     }
 }

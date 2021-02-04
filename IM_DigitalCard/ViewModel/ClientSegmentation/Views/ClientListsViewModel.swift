@@ -9,10 +9,10 @@ import SwiftUI
 import Combine
 
 class ClientListsViewModel: ObservableObject{
-    @Published var clientListItems: [ClientList]
+    @Published var clientSegmentationItems: [ClientSegmentationViewModel]
     
     init(){
-        clientListItems = ClientList.getRecords() as! [ClientList]
+        clientSegmentationItems = (ClientList.getRecords() as! [ClientList]).map{ClientSegmentationViewModel(clientList: $0)}
     }
     
     func onClientListClick(clientListItem: ClientList){

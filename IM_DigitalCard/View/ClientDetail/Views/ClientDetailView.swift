@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ClientDetailView: View {
+    @StateObject var viewModel: ClientDetailViewModel
+    
+    init(clientId: String){
+        _viewModel = StateObject(wrappedValue: ClientDetailViewModel(clientId: clientId));
+    }
+
     var body: some View {
         VStack{
-            Text("Client detail")
+            Text(viewModel.clientDetail.client.firstName)
+            Text(viewModel.clientDetail.client.lastName)
         }
     }
 }
 
 struct ClientDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ClientDetailView()
+        ClientDetailView(clientId: "")
     }
 }

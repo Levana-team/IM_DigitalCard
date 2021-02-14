@@ -42,12 +42,36 @@ class ClientService{
                 let currentContext = CoreDataStack.shared.backgroundContext
                 decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
                 
+                let value = try decoder.decode(Client.self, from: result.asData())
                 
-        let value = try decoder.decode(Client.self, from: result.asData())
-        CoreDataStack.shared.save(context: currentContext)
-        
-        return value
+                return value
+            }
+            .eraseToAnyPublisher()
     }
+    
+    
+    func getClientDetails(clientId: String) -> AnyPublisher<ClientDetail, Error>{
+        
+        NetworkingService.executeRequest(restMethod: .GET, wsName: "/clientDetail/\(clientId)", queryParams: nil)
+            .receive(on: RunLoop.main)
+            .tryMap { result -> ClientDetail in
+    
+                do {
+                    let decoder = JSONDecoder()
+                    let currentContext = CoreDataStack.shared.backgroundContext
+                    decoder.userInfo[CodingUserInfoKey.managedObjectContext] = currentContext
+                    
+                    
+                    let value = try decoder.decode(ClientDetail.self, from: result.asData())
+                   
+                    
+                    return value
+                } catch {
+                    print("fetchEntityMapping Failed: \(error)")
+                }
+                return ClientDetail()
+                
+            }
             .eraseToAnyPublisher()
     }
 }

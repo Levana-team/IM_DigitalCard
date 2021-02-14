@@ -87,15 +87,6 @@ public class NetworkingService{
             .eraseToAnyPublisher()
     }
     
-    public static func executeRequest(restMethod: RestRequest.Method, wsName :String, queryParams:[String: String]?, body:[String: AnyObject]?) ->AnyPublisher<RestResponse, RestClientError>{
-        
-        let request = RestRequest(method: restMethod, path: wsName, queryParams: queryParams)
-        request.endpoint = self.WS_ENDPOINT
-        
-        return RestClient.shared.publisher(for: request).eraseToAnyPublisher()
-    }
-    
-    
     public static func executeQueryPublisher(query: String) -> AnyPublisher<RestResponse, RestClientError>{
         let request = RestClient.shared.request(forQuery: query, apiVersion: nil)
         let requestPublisher = CurrentValueSubject<RestRequest, RestClientError>(request)

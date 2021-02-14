@@ -11,7 +11,7 @@ struct ClientView: View {
     var clientView: ClientViewModel
     
     var body: some View {
-        NavigationLink(destination: ClientDetailView()) {
+        NavigationLink(destination: ClientDetailView(clientId: clientView.clientId)) {
             VStack{
                 Text(clientView.fullName)
             }

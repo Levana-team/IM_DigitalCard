@@ -21,14 +21,7 @@ class SOQLQueries {
     }
     
     static func getClientListItems(clientListItem: ClientList) -> String {
-        
-        var clientQuery = Queries.getQuery(by: "Clients")
-        
-        //if let fromDate = fromDate {
-        //    clientQuery.append(" AND LastModifiedDate >= \(fromDate.toString(format: .sfDateTime))")
-        //}
-        
-        clientQuery.append(" ORDER BY lastName, firstName limit 200")
-        return clientQuery
+        let clientListQuery =  "\(Queries.getQuery(by: "Clients")) \(clientListItem.query ?? "") order by \(clientListItem.orderByField ?? "firstName") \(clientListItem.orderByAscDesc ?? "asc") limit \(clientListItem.limit )"
+        return clientListQuery
     }
 }

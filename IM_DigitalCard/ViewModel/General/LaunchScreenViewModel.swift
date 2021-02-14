@@ -14,12 +14,14 @@ class LaunchScreenViewModel: ObservableObject{
     @Published var isDataLoaded: Bool = false
     
     init(){
+        self.isDataLoaded = true
+        /*
         if GlobalSyncService.shared.needToPerformSync(){
             GlobalSyncService.shared.retrieveData()
             .sink(receiveCompletion: { _ in}, receiveValue: { items in
                 self.isDataLoaded = true
             }).store(in: &disposables)
-        }
+        }*/
     }
     
     var homeImage: Image{

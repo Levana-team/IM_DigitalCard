@@ -13,7 +13,7 @@ class ConfigService{
     private var disposables = Set<AnyCancellable>()
     
     func retrieveConfigValues() -> AnyPublisher<Bool, Never>{
-        return NetworkingService.executeRequest(restMethod: .GET, wsName: "/setup?app=digitalCard", queryParams: nil, body: nil)
+        return NetworkingService.executeRequest(restMethod: .GET, wsName: "/setup?app=digitalCard", queryParams: nil)
             .mapToDictionnary()
             .map{ response -> Bool in
                 self.saveConfigItems(response: response)

@@ -12,7 +12,7 @@ import CoreData
 @objc(ClientList)
 public class ClientList: NSManagedObject, Codable {
     enum CodingKeys: CodingKey {
-        case position, descriptionText, query, id, name
+        case position, descriptionText, query, id, name, orderByAscDesc, orderByField, inMyStore, isManagerList, isSpecialClientList, displayType, limit
     }
 
     required convenience public init(from decoder: Decoder) throws {
@@ -28,6 +28,13 @@ public class ClientList: NSManagedObject, Codable {
         self.query = try container.decodeIfPresent(String.self, forKey: .query)
         self.descriptionText = try container.decodeIfPresent(String.self, forKey: .descriptionText)
         self.position = try container.decode(Int16.self, forKey: .position)
+        self.orderByAscDesc = try container.decode(String.self, forKey: .orderByAscDesc)
+        self.orderByField = try container.decode(String.self, forKey: .orderByField)
+        self.displayType = try container.decode(String.self, forKey: .displayType)
+        self.limit = try container.decode(Int16.self, forKey: .limit)
+        self.inMyStore = try container.decode(Bool.self, forKey: .inMyStore)
+        self.isManagerList = try container.decode(Bool.self, forKey: .isManagerList)
+        self.isSpecialClientList = try container.decode(Bool.self, forKey: .isSpecialClientList)
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -38,6 +45,13 @@ public class ClientList: NSManagedObject, Codable {
         try container.encode(query, forKey: .query)
         try container.encode(descriptionText, forKey: .descriptionText)
         try container.encode(position, forKey: .position)
+        try container.encode(orderByAscDesc, forKey: .orderByAscDesc)
+        try container.encode(orderByField, forKey: .orderByField)
+        try container.encode(displayType, forKey: .displayType)
+        try container.encode(limit, forKey: .limit)
+        try container.encode(inMyStore, forKey: .inMyStore)
+        try container.encode(isManagerList, forKey: .isManagerList)
+        try container.encode(isSpecialClientList, forKey: .isSpecialClientList)
     }
     
     static func getClientsPredicate(clientList: ClientList, searchText:String) -> NSPredicate{

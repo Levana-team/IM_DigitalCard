@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Client : Codable {
+struct Client{
     var firstName: String
     var lastName: String
     var email: String
@@ -17,7 +17,7 @@ struct Client : Codable {
     var country: String
     var postalCode: String
     var state: String
-    var signatureImgData: Data
+    var signatureImgData: Data?
     
     
     init(){
@@ -30,7 +30,34 @@ struct Client : Codable {
         country = ""
         postalCode = ""
         state = ""
-        signatureImgData = Data()
+    }
+}
+
+extension Client: Codable {
+    enum CodingKeys: String, CodingKey {
+        case firstName
+        case lastName
+        case email
+        case phone
+        case street
+        case city
+        case country
+        case postalCode
+        case state
+        case signatureImgData
+    }
+    
+    init(from decoder: Decoder) throws {
+       let values = try decoder.container(keyedBy: CodingKeys.self)
+        firstName = try values.decode(String.self, forKey: .firstName)
+        lastName = try values.decode(String.self, forKey: .lastName)
+        email = try values.decodeIfPresent(String.self, forKey: .email) ?? ""
+        phone = try values.decodeIfPresent(String.self, forKey: .phone) ?? ""
+        street = try values.decodeIfPresent(String.self, forKey: .street) ?? ""
+        city = try values.decodeIfPresent(String.self, forKey: .city) ?? ""
+        country = try values.decodeIfPresent(String.self, forKey: .country) ?? ""
+        postalCode = try values.decodeIfPresent(String.self, forKey: .postalCode) ?? ""
+        state = try values.decodeIfPresent(String.self, forKey: .state) ?? ""
     }
 }
 

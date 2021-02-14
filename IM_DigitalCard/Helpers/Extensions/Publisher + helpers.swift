@@ -9,6 +9,7 @@ import Combine
 import SalesforceSDKCore
 import CoreData
 
+
 extension Publisher where Output == RestResponse{
   func mapToList()
     -> Publishers.Map<Self, [[String : AnyObject]]>{
@@ -59,15 +60,18 @@ extension Publisher where Output == RestResponse{
     func saveToCoreData<T: Codable>(type: T.Type)
     -> Publishers.TryMap<Self, RestResponse>{
         tryMap{ result -> RestResponse in
-            
-            let backgroundContext = CoreDataStack.shared.backgroundContext
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            decoder.userInfo[.managedObjectContext] = backgroundContext
-            
-            let value = try decoder.decode(T.self, from: result.asData())
-            
-            try backgroundContext.save()
+            do {
+                let backgroundContext = CoreDataStack.shared.backgroundContext
+                let decoder = Utils.getDefaultDecoder(context: backgroundContext)
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.userInfo[.managedObjectContext] = backgroundContext
+                
+                let value = try decoder.decode(T.self, from: result.asData())
+                
+                try backgroundContext.save()
+            } catch{
+                print("Unexpected error: .")//\(error)
+            }
             
             return result
         }
@@ -88,13 +92,13 @@ extension Publisher where Output == RestResponse{
                         let updatedRecords = records.map{ record in
                             return Utils.mapObject(record: record, mapping: mapping)
                         }
-                        
+                
                         let json = try JSONSerialization.data(withJSONObject: updatedRecords)
-                        let decoder = JSONDecoder()
                         let backgroundContext = CoreDataStack.shared.backgroundContext
-                        decoder.userInfo[CodingUserInfoKey.managedObjectContext] = backgroundContext
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        
+                        let decoder = Utils.getDefaultDecoder(context: backgroundContext)
                         let items = try decoder.decode(type.self, from: json)
+                        
                         if let onBeforeSave = onBeforeSave{
                             onBeforeSave(items as! Set<NSManagedObject>, backgroundContext)
                         }
@@ -102,7 +106,7 @@ extension Publisher where Output == RestResponse{
                     }
                 }
             } catch{
-                print("Unexpected error: \(error).")
+                print("Unexpected error: .")//\(error)
             }
             return result
         }

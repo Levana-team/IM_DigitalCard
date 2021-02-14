@@ -63,6 +63,8 @@
 		479E3F2325B85AEE00994F8B /* ClientSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */; };
 		479E3F2725B85B1B00994F8B /* ClientSegmentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */; };
 		47B9721125AB941A002438DA /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
+		47D0F52625D96F3400FCACDF /* ClientDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */; };
+		47D0F52A25D9721C00FCACDF /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52925D9721C00FCACDF /* ClientDetail.swift */; };
 		BB416018CCB77199A45A722C /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationView.swift; sourceTree = "<group>"; };
 		479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSegmentationViewModel.swift; sourceTree = "<group>"; };
 		47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapping+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailViewModel.swift; sourceTree = "<group>"; };
+		47D0F52925D9721C00FCACDF /* ClientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetail.swift; sourceTree = "<group>"; };
 		64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IM_DigitalCard.release.xcconfig"; path = "Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +285,7 @@
 				16D553CA259B297C007686D5 /* General */,
 				47625D5825B5DC2C001ECB3B /* ClientSegmentation */,
 				4755732825B043EE00C22B5A /* Clients */,
+				47D0F52325D96F0D00FCACDF /* ClientDetail */,
 				16BE744525A1167C00DF4197 /* NewClient */,
 			);
 			path = ViewModel;
@@ -310,6 +315,7 @@
 			children = (
 				16BE744825A1190900DF4197 /* CoreData */,
 				16BE744925A1192A00DF4197 /* Client.swift */,
+				47D0F52925D9721C00FCACDF /* ClientDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -496,6 +502,22 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		47D0F52325D96F0D00FCACDF /* ClientDetail */ = {
+			isa = PBXGroup;
+			children = (
+				47D0F52425D96F2200FCACDF /* Views */,
+			);
+			path = ClientDetail;
+			sourceTree = "<group>";
+		};
+		47D0F52425D96F2200FCACDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		728A9FFCE50E08957BDFB8F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,7 +667,9 @@
 				16D553B8259B21B8007686D5 /* TranslationService.swift in Sources */,
 				477B47C525B34CB20054C8F8 /* ClientListService.swift in Sources */,
 				16D553A7259B1A22007686D5 /* GlobalSyncService.swift in Sources */,
+				47D0F52625D96F3400FCACDF /* ClientDetailViewModel.swift in Sources */,
 				47625D5F25B5E17D001ECB3B /* ClientListsView.swift in Sources */,
+				47D0F52A25D9721C00FCACDF /* ClientDetail.swift in Sources */,
 				476C7CA725B789240080D032 /* ClientDetailView.swift in Sources */,
 				16D553BE259B25FD007686D5 /* CoreDataStack.swift in Sources */,
 				160D9DA425A343B700E991B7 /* AddressHelperView.swift in Sources */,

@@ -12,9 +12,9 @@ class SOQLQueries {
         
         var clientQuery = Queries.getQuery(by: "Clients")
         
-        //if let fromDate = fromDate {
-        //    clientQuery.append(" AND LastModifiedDate >= \(fromDate.toString(format: .sfDateTime))")
-        //}
+        if let fromDate = fromDate {
+            //clientQuery.append(" AND LastModifiedDate >= \(fromDate.toString(format: .sfDateTime))")
+        }
         
         clientQuery.append(" ORDER BY lastName, firstName ")
         return clientQuery

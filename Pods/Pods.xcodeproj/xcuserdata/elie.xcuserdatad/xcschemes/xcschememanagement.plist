@@ -6,28 +6,66 @@
 	<dict>
 		<key>Pods-IM_DigitalCard.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>SalesforceAnalytics.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>SalesforceSDKCommon.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>SalesforceSDKCore-SalesforceSDKResources.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 		<key>SalesforceSDKCore.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F2576F406A249D701318BE0BC7D2A90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE6343423C0C095B140A701462914165</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2868795DCC46F8A3AF2E17E78EB55A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5CDF753E8623C92054C1B8132D0A21F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD74371EC8430BAD720EEB078252F46C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

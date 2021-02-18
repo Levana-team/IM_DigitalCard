@@ -92,6 +92,13 @@ extension Publisher where Output == RestResponse{
                         let updatedRecords = records.map{ record in
                             return Utils.mapObject(record: record, mapping: mapping)
                         }
+                        
+                        for record in updatedRecords{
+                            guard let lastName = record["lastName"] else{
+                                print(record["lastName"] as? String ?? "")
+                                return result
+                            }
+                        }
                 
                         let json = try JSONSerialization.data(withJSONObject: updatedRecords)
                         let backgroundContext = CoreDataStack.shared.backgroundContext

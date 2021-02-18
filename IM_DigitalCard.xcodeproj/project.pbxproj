@@ -65,6 +65,127 @@
 		47B9721125AB941A002438DA /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
 		47D0F52625D96F3400FCACDF /* ClientDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */; };
 		47D0F52A25D9721C00FCACDF /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52925D9721C00FCACDF /* ClientDetail.swift */; };
+		47D3C89E25DF09C90037B10B /* ClientSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */; };
+		47D3C89F25DF09C90037B10B /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA025B757920080D032 /* ClientView.swift */; };
+		47D3C8A025DF09C90037B10B /* NewClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744125A1167500DF4197 /* NewClientViewModel.swift */; };
+		47D3C8A125DF09C90037B10B /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B482625AA627500938A60 /* Account+CoreDataClass.swift */; };
+		47D3C8A225DF09C90037B10B /* CodingUserInfoKey + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553E0259B5478007686D5 /* CodingUserInfoKey + helpers.swift */; };
+		47D3C8A325DF09C90037B10B /* ClientsFetchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732A25B0440C00C22B5A /* ClientsFetchViewModel.swift */; };
+		47D3C8A425DF09C90037B10B /* IM_DigitalCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */; };
+		47D3C8A525DF09C90037B10B /* ClientSegmentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */; };
+		47D3C8A625DF09C90037B10B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744925A1192A00DF4197 /* Client.swift */; };
+		47D3C8A725DF09C90037B10B /* SOQLQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737925B0EE7B00C22B5A /* SOQLQueries.swift */; };
+		47D3C8A825DF09C90037B10B /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744C25A1214300DF4197 /* ClientService.swift */; };
+		47D3C8A925DF09C90037B10B /* Translation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553DA259B374D007686D5 /* Translation+CoreDataClass.swift */; };
+		47D3C8AA25DF09C90037B10B /* NewClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE743E25A0D13F00DF4197 /* NewClientView.swift */; };
+		47D3C8AB25DF09C90037B10B /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7BB25A203C40086BA74 /* DrawingView.swift */; };
+		47D3C8AC25DF09C90037B10B /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553B7259B21B8007686D5 /* TranslationService.swift */; };
+		47D3C8AD25DF09C90037B10B /* ClientListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C425B34CB20054C8F8 /* ClientListService.swift */; };
+		47D3C8AE25DF09C90037B10B /* GlobalSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553A6259B1A22007686D5 /* GlobalSyncService.swift */; };
+		47D3C8AF25DF09C90037B10B /* ClientDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */; };
+		47D3C8B025DF09C90037B10B /* ClientListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5E25B5E17D001ECB3B /* ClientListsView.swift */; };
+		47D3C8B125DF09C90037B10B /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52925D9721C00FCACDF /* ClientDetail.swift */; };
+		47D3C8B225DF09C90037B10B /* ClientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA625B789240080D032 /* ClientDetailView.swift */; };
+		47D3C8B325DF09C90037B10B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553BD259B25FD007686D5 /* CoreDataStack.swift */; };
+		47D3C8B425DF09C90037B10B /* AddressHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DA325A343B700E991B7 /* AddressHelperView.swift */; };
+		47D3C8B525DF09C90037B10B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0E192598BDA1005A4261 /* main.swift */; };
+		47D3C8B625DF09C90037B10B /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
+		47D3C8B725DF09C90037B10B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553AA259B1A76007686D5 /* Utils.swift */; };
+		47D3C8B825DF09C90037B10B /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165FFFBE259E0B1D00F68121 /* Document+CoreDataClass.swift */; };
+		47D3C8B925DF09C90037B10B /* ClientListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731E25B0283000C22B5A /* ClientListViews.swift */; };
+		47D3C8BA25DF09C90037B10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DEF2598A34A005A4261 /* AppDelegate.swift */; };
+		47D3C8BB25DF09C90037B10B /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A7670259C982B00D0CFA3 /* ConfigService.swift */; };
+		47D3C8BC25DF09C90037B10B /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732E25B04AB500C22B5A /* FilteredListView.swift */; };
+		47D3C8BD25DF09C90037B10B /* ClientSegmentationItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9125B703340080D032 /* ClientSegmentationItemsView.swift */; };
+		47D3C8BE25DF09C90037B10B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553C0259B261E007686D5 /* Constants.swift */; };
+		47D3C8BF25DF09C90037B10B /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553CB259B298C007686D5 /* LaunchScreenViewModel.swift */; };
+		47D3C8C025DF09C90037B10B /* String + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7B725A1D63A0086BA74 /* String + helpers.swift */; };
+		47D3C8C125DF09C90037B10B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF12598A34A005A4261 /* SceneDelegate.swift */; };
+		47D3C8C225DF09C90037B10B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DAB25A344E300E991B7 /* SearchBar.swift */; };
+		47D3C8C325DF09C90037B10B /* NSManagedObject + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7727C259C6A56005F7248 /* NSManagedObject + helpers.swift */; };
+		47D3C8C425DF09C90037B10B /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7BF25A204EB0086BA74 /* SignatureView.swift */; };
+		47D3C8C525DF09C90037B10B /* Queries+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755736C25B0E75200C22B5A /* Queries+CoreDataClass.swift */; };
+		47D3C8C625DF09C90037B10B /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553C5259B296D007686D5 /* LaunchScreenView.swift */; };
+		47D3C8C725DF09C90037B10B /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553AD259B1A97007686D5 /* UserDefaultUtils.swift */; };
+		47D3C8C825DF09C90037B10B /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4CF60259DF19500AFB156 /* FileManagement.swift */; };
+		47D3C8C925DF09C90037B10B /* ClientListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5A25B5DC6A001ECB3B /* ClientListsViewModel.swift */; };
+		47D3C8CA25DF09C90037B10B /* Publisher + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553CF259B2E23007686D5 /* Publisher + helpers.swift */; };
+		47D3C8CB25DF09C90037B10B /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737325B0E93300C22B5A /* CoreDataUtils.swift */; };
+		47D3C8CC25DF09C90037B10B /* AddressHelperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DA825A3444700E991B7 /* AddressHelperViewModel.swift */; };
+		47D3C8CD25DF09C90037B10B /* ClientSegmentationItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C8E25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift */; };
+		47D3C8CE25DF09C90037B10B /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731825B0236200C22B5A /* TabBarContainerView.swift */; };
+		47D3C8CF25DF09C90037B10B /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9D25B756260080D032 /* ClientViewModel.swift */; };
+		47D3C8D025DF09C90037B10B /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553BA259B2257007686D5 /* NetworkingService.swift */; };
+		47D3C8D125DF09C90037B10B /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553B1259B1AD4007686D5 /* UserDefaultKey.swift */; };
+		47D3C8D225DF09C90037B10B /* ClientList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C725B3631F0054C8F8 /* ClientList+CoreDataClass.swift */; };
+		47D3C8D325DF09C90037B10B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF32598A34A005A4261 /* ContentView.swift */; };
+		47D3C8D525DF09C90037B10B /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
+		47D3C8D825DF09C90037B10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DFD2598A34C005A4261 /* LaunchScreen.storyboard */; };
+		47D3C8D925DF09C90037B10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DFB2598A34C005A4261 /* Preview Assets.xcassets */; };
+		47D3C8DA25DF09C90037B10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DF82598A34C005A4261 /* Assets.xcassets */; };
+		47D3C8E525DF09CD0037B10B /* ClientSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2225B85AEE00994F8B /* ClientSegmentationView.swift */; };
+		47D3C8E625DF09CD0037B10B /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA025B757920080D032 /* ClientView.swift */; };
+		47D3C8E725DF09CD0037B10B /* NewClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744125A1167500DF4197 /* NewClientViewModel.swift */; };
+		47D3C8E825DF09CD0037B10B /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B482625AA627500938A60 /* Account+CoreDataClass.swift */; };
+		47D3C8E925DF09CD0037B10B /* CodingUserInfoKey + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553E0259B5478007686D5 /* CodingUserInfoKey + helpers.swift */; };
+		47D3C8EA25DF09CD0037B10B /* ClientsFetchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732A25B0440C00C22B5A /* ClientsFetchViewModel.swift */; };
+		47D3C8EB25DF09CD0037B10B /* IM_DigitalCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF52598A34A005A4261 /* IM_DigitalCard.xcdatamodeld */; };
+		47D3C8EC25DF09CD0037B10B /* ClientSegmentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E3F2625B85B1B00994F8B /* ClientSegmentationViewModel.swift */; };
+		47D3C8ED25DF09CD0037B10B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744925A1192A00DF4197 /* Client.swift */; };
+		47D3C8EE25DF09CD0037B10B /* SOQLQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737925B0EE7B00C22B5A /* SOQLQueries.swift */; };
+		47D3C8EF25DF09CD0037B10B /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE744C25A1214300DF4197 /* ClientService.swift */; };
+		47D3C8F025DF09CD0037B10B /* Translation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553DA259B374D007686D5 /* Translation+CoreDataClass.swift */; };
+		47D3C8F125DF09CD0037B10B /* NewClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BE743E25A0D13F00DF4197 /* NewClientView.swift */; };
+		47D3C8F225DF09CD0037B10B /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7BB25A203C40086BA74 /* DrawingView.swift */; };
+		47D3C8F325DF09CD0037B10B /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553B7259B21B8007686D5 /* TranslationService.swift */; };
+		47D3C8F425DF09CD0037B10B /* ClientListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C425B34CB20054C8F8 /* ClientListService.swift */; };
+		47D3C8F525DF09CD0037B10B /* GlobalSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553A6259B1A22007686D5 /* GlobalSyncService.swift */; };
+		47D3C8F625DF09CD0037B10B /* ClientDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */; };
+		47D3C8F725DF09CD0037B10B /* ClientListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5E25B5E17D001ECB3B /* ClientListsView.swift */; };
+		47D3C8F825DF09CD0037B10B /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F52925D9721C00FCACDF /* ClientDetail.swift */; };
+		47D3C8F925DF09CD0037B10B /* ClientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7CA625B789240080D032 /* ClientDetailView.swift */; };
+		47D3C8FA25DF09CD0037B10B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553BD259B25FD007686D5 /* CoreDataStack.swift */; };
+		47D3C8FB25DF09CD0037B10B /* AddressHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DA325A343B700E991B7 /* AddressHelperView.swift */; };
+		47D3C8FC25DF09CD0037B10B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0E192598BDA1005A4261 /* main.swift */; };
+		47D3C8FD25DF09CD0037B10B /* Mapping+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */; };
+		47D3C8FE25DF09CD0037B10B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553AA259B1A76007686D5 /* Utils.swift */; };
+		47D3C8FF25DF09CD0037B10B /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165FFFBE259E0B1D00F68121 /* Document+CoreDataClass.swift */; };
+		47D3C90025DF09CD0037B10B /* ClientListViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731E25B0283000C22B5A /* ClientListViews.swift */; };
+		47D3C90125DF09CD0037B10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DEF2598A34A005A4261 /* AppDelegate.swift */; };
+		47D3C90225DF09CD0037B10B /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A7670259C982B00D0CFA3 /* ConfigService.swift */; };
+		47D3C90325DF09CD0037B10B /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755732E25B04AB500C22B5A /* FilteredListView.swift */; };
+		47D3C90425DF09CD0037B10B /* ClientSegmentationItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9125B703340080D032 /* ClientSegmentationItemsView.swift */; };
+		47D3C90525DF09CD0037B10B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553C0259B261E007686D5 /* Constants.swift */; };
+		47D3C90625DF09CD0037B10B /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553CB259B298C007686D5 /* LaunchScreenViewModel.swift */; };
+		47D3C90725DF09CD0037B10B /* String + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7B725A1D63A0086BA74 /* String + helpers.swift */; };
+		47D3C90825DF09CD0037B10B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF12598A34A005A4261 /* SceneDelegate.swift */; };
+		47D3C90925DF09CD0037B10B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DAB25A344E300E991B7 /* SearchBar.swift */; };
+		47D3C90A25DF09CD0037B10B /* NSManagedObject + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7727C259C6A56005F7248 /* NSManagedObject + helpers.swift */; };
+		47D3C90B25DF09CD0037B10B /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687C7BF25A204EB0086BA74 /* SignatureView.swift */; };
+		47D3C90C25DF09CD0037B10B /* Queries+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755736C25B0E75200C22B5A /* Queries+CoreDataClass.swift */; };
+		47D3C90D25DF09CD0037B10B /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553C5259B296D007686D5 /* LaunchScreenView.swift */; };
+		47D3C90E25DF09CD0037B10B /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553AD259B1A97007686D5 /* UserDefaultUtils.swift */; };
+		47D3C90F25DF09CD0037B10B /* FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4CF60259DF19500AFB156 /* FileManagement.swift */; };
+		47D3C91025DF09CD0037B10B /* ClientListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47625D5A25B5DC6A001ECB3B /* ClientListsViewModel.swift */; };
+		47D3C91125DF09CD0037B10B /* Publisher + helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553CF259B2E23007686D5 /* Publisher + helpers.swift */; };
+		47D3C91225DF09CD0037B10B /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755737325B0E93300C22B5A /* CoreDataUtils.swift */; };
+		47D3C91325DF09CD0037B10B /* AddressHelperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9DA825A3444700E991B7 /* AddressHelperViewModel.swift */; };
+		47D3C91425DF09CD0037B10B /* ClientSegmentationItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C8E25B7030A0080D032 /* ClientSegmentationItemsViewModel.swift */; };
+		47D3C91525DF09CD0037B10B /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4755731825B0236200C22B5A /* TabBarContainerView.swift */; };
+		47D3C91625DF09CD0037B10B /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C7C9D25B756260080D032 /* ClientViewModel.swift */; };
+		47D3C91725DF09CD0037B10B /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553BA259B2257007686D5 /* NetworkingService.swift */; };
+		47D3C91825DF09CD0037B10B /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D553B1259B1AD4007686D5 /* UserDefaultKey.swift */; };
+		47D3C91925DF09CD0037B10B /* ClientList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B47C725B3631F0054C8F8 /* ClientList+CoreDataClass.swift */; };
+		47D3C91A25DF09CD0037B10B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DB0DF32598A34A005A4261 /* ContentView.swift */; };
+		47D3C91C25DF09CD0037B10B /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
+		47D3C91F25DF09CD0037B10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DFD2598A34C005A4261 /* LaunchScreen.storyboard */; };
+		47D3C92025DF09CD0037B10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DFB2598A34C005A4261 /* Preview Assets.xcassets */; };
+		47D3C92125DF09CD0037B10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0DF82598A34C005A4261 /* Assets.xcassets */; };
+		47D3C93D25DF0B830037B10B /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D3C93125DF0A680037B10B /* bootconfig.plist */; };
+		47D3C94425DF0B870037B10B /* bootconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D3C93225DF0A680037B10B /* bootconfig.plist */; };
+		47D3C95125DF0B940037B10B /* Info_dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D3C92A25DF0A560037B10B /* Info_dev.plist */; };
+		47D3C95F25DF0B9B0037B10B /* Info_full.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D3C92B25DF0A560037B10B /* Info_full.plist */; };
+		47D3C96625DF0BA00037B10B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DB0E002598A34C005A4261 /* Info.plist */; };
 		BB416018CCB77199A45A722C /* Pods_IM_DigitalCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77A866B92CA892D0DCE8A8 /* Pods_IM_DigitalCard.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +252,12 @@
 		47B9720F25AB941A002438DA /* Mapping+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapping+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		47D0F52525D96F3400FCACDF /* ClientDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailViewModel.swift; sourceTree = "<group>"; };
 		47D0F52925D9721C00FCACDF /* ClientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetail.swift; sourceTree = "<group>"; };
+		47D3C8DF25DF09C90037B10B /* IM_DigitalCard DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IM_DigitalCard DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D3C92625DF09CD0037B10B /* IM_DigitalCard FULL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IM_DigitalCard FULL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D3C92A25DF0A560037B10B /* Info_dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_dev.plist; sourceTree = "<group>"; };
+		47D3C92B25DF0A560037B10B /* Info_full.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_full.plist; sourceTree = "<group>"; };
+		47D3C93125DF0A680037B10B /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
+		47D3C93225DF0A680037B10B /* bootconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bootconfig.plist; sourceTree = "<group>"; };
 		64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IM_DigitalCard.release.xcconfig"; path = "Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +267,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB416018CCB77199A45A722C /* Pods_IM_DigitalCard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C8D425DF09C90037B10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C8D525DF09C90037B10B /* Pods_IM_DigitalCard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C91B25DF09CD0037B10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C91C25DF09CD0037B10B /* Pods_IM_DigitalCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				16DB0DEC2598A34A005A4261 /* IM_DigitalCard.app */,
+				47D3C8DF25DF09C90037B10B /* IM_DigitalCard DEV.app */,
+				47D3C92625DF09CD0037B10B /* IM_DigitalCard FULL.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,9 +512,9 @@
 		16DB0E1D2598BE34005A4261 /* setup */ = {
 			isa = PBXGroup;
 			children = (
-				16DB0E002598A34C005A4261 /* Info.plist */,
+				47D3C89A25DF089D0037B10B /* SDK */,
+				47D3C89925DF088C0037B10B /* Plist */,
 				16DB0E192598BDA1005A4261 /* main.swift */,
-				16DB0E102598B1D9005A4261 /* bootconfig.plist */,
 				16DB0DEF2598A34A005A4261 /* AppDelegate.swift */,
 				16DB0DF12598A34A005A4261 /* SceneDelegate.swift */,
 			);
@@ -518,6 +663,42 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		47D3C89925DF088C0037B10B /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				47D3C92A25DF0A560037B10B /* Info_dev.plist */,
+				47D3C92B25DF0A560037B10B /* Info_full.plist */,
+				16DB0E002598A34C005A4261 /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		47D3C89A25DF089D0037B10B /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				47D3C93C25DF0B5A0037B10B /* FULL */,
+				47D3C93B25DF0B480037B10B /* DEV */,
+				16DB0E102598B1D9005A4261 /* bootconfig.plist */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		47D3C93B25DF0B480037B10B /* DEV */ = {
+			isa = PBXGroup;
+			children = (
+				47D3C93225DF0A680037B10B /* bootconfig.plist */,
+			);
+			path = DEV;
+			sourceTree = "<group>";
+		};
+		47D3C93C25DF0B5A0037B10B /* FULL */ = {
+			isa = PBXGroup;
+			children = (
+				47D3C93125DF0A680037B10B /* bootconfig.plist */,
+			);
+			path = FULL;
+			sourceTree = "<group>";
+		};
 		728A9FFCE50E08957BDFB8F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +738,44 @@
 			productReference = 16DB0DEC2598A34A005A4261 /* IM_DigitalCard.app */;
 			productType = "com.apple.product-type.application";
 		};
+		47D3C89B25DF09C90037B10B /* IM_DigitalCard DEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47D3C8DC25DF09C90037B10B /* Build configuration list for PBXNativeTarget "IM_DigitalCard DEV" */;
+			buildPhases = (
+				47D3C89C25DF09C90037B10B /* [CP] Check Pods Manifest.lock */,
+				47D3C89D25DF09C90037B10B /* Sources */,
+				47D3C8D425DF09C90037B10B /* Frameworks */,
+				47D3C8D625DF09C90037B10B /* Resources */,
+				47D3C8DB25DF09C90037B10B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IM_DigitalCard DEV";
+			productName = IM_DigitalCard;
+			productReference = 47D3C8DF25DF09C90037B10B /* IM_DigitalCard DEV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47D3C8E225DF09CD0037B10B /* IM_DigitalCard FULL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47D3C92325DF09CD0037B10B /* Build configuration list for PBXNativeTarget "IM_DigitalCard FULL" */;
+			buildPhases = (
+				47D3C8E325DF09CD0037B10B /* [CP] Check Pods Manifest.lock */,
+				47D3C8E425DF09CD0037B10B /* Sources */,
+				47D3C91B25DF09CD0037B10B /* Frameworks */,
+				47D3C91D25DF09CD0037B10B /* Resources */,
+				47D3C92225DF09CD0037B10B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IM_DigitalCard FULL";
+			productName = IM_DigitalCard;
+			productReference = 47D3C92625DF09CD0037B10B /* IM_DigitalCard FULL.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -585,6 +804,8 @@
 			projectRoot = "";
 			targets = (
 				16DB0DEB2598A34A005A4261 /* IM_DigitalCard */,
+				47D3C89B25DF09C90037B10B /* IM_DigitalCard DEV */,
+				47D3C8E225DF09CD0037B10B /* IM_DigitalCard FULL */,
 			);
 		};
 /* End PBXProject section */
@@ -597,7 +818,32 @@
 				16DB0E112598B1D9005A4261 /* bootconfig.plist in Resources */,
 				16DB0DFF2598A34C005A4261 /* LaunchScreen.storyboard in Resources */,
 				16DB0DFC2598A34C005A4261 /* Preview Assets.xcassets in Resources */,
+				47D3C96625DF0BA00037B10B /* Info.plist in Resources */,
 				16DB0DF92598A34C005A4261 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C8D625DF09C90037B10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C8D825DF09C90037B10B /* LaunchScreen.storyboard in Resources */,
+				47D3C95125DF0B940037B10B /* Info_dev.plist in Resources */,
+				47D3C8D925DF09C90037B10B /* Preview Assets.xcassets in Resources */,
+				47D3C8DA25DF09C90037B10B /* Assets.xcassets in Resources */,
+				47D3C94425DF0B870037B10B /* bootconfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C91D25DF09CD0037B10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C91F25DF09CD0037B10B /* LaunchScreen.storyboard in Resources */,
+				47D3C95F25DF0B9B0037B10B /* Info_full.plist in Resources */,
+				47D3C92025DF09CD0037B10B /* Preview Assets.xcassets in Resources */,
+				47D3C92125DF09CD0037B10B /* Assets.xcassets in Resources */,
+				47D3C93D25DF0B830037B10B /* bootconfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +851,84 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		224596A24E130D3E9075B49B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D3C89C25DF09C90037B10B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IM_DigitalCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D3C8DB25DF09C90037B10B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IM_DigitalCard/Pods-IM_DigitalCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D3C8E325DF09CD0037B10B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IM_DigitalCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47D3C92225DF09CD0037B10B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -704,6 +1028,128 @@
 				16D553B2259B1AD4007686D5 /* UserDefaultKey.swift in Sources */,
 				477B47C925B3631F0054C8F8 /* ClientList+CoreDataClass.swift in Sources */,
 				16DB0DF42598A34A005A4261 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C89D25DF09C90037B10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C89E25DF09C90037B10B /* ClientSegmentationView.swift in Sources */,
+				47D3C89F25DF09C90037B10B /* ClientView.swift in Sources */,
+				47D3C8A025DF09C90037B10B /* NewClientViewModel.swift in Sources */,
+				47D3C8A125DF09C90037B10B /* Account+CoreDataClass.swift in Sources */,
+				47D3C8A225DF09C90037B10B /* CodingUserInfoKey + helpers.swift in Sources */,
+				47D3C8A325DF09C90037B10B /* ClientsFetchViewModel.swift in Sources */,
+				47D3C8A425DF09C90037B10B /* IM_DigitalCard.xcdatamodeld in Sources */,
+				47D3C8A525DF09C90037B10B /* ClientSegmentationViewModel.swift in Sources */,
+				47D3C8A625DF09C90037B10B /* Client.swift in Sources */,
+				47D3C8A725DF09C90037B10B /* SOQLQueries.swift in Sources */,
+				47D3C8A825DF09C90037B10B /* ClientService.swift in Sources */,
+				47D3C8A925DF09C90037B10B /* Translation+CoreDataClass.swift in Sources */,
+				47D3C8AA25DF09C90037B10B /* NewClientView.swift in Sources */,
+				47D3C8AB25DF09C90037B10B /* DrawingView.swift in Sources */,
+				47D3C8AC25DF09C90037B10B /* TranslationService.swift in Sources */,
+				47D3C8AD25DF09C90037B10B /* ClientListService.swift in Sources */,
+				47D3C8AE25DF09C90037B10B /* GlobalSyncService.swift in Sources */,
+				47D3C8AF25DF09C90037B10B /* ClientDetailViewModel.swift in Sources */,
+				47D3C8B025DF09C90037B10B /* ClientListsView.swift in Sources */,
+				47D3C8B125DF09C90037B10B /* ClientDetail.swift in Sources */,
+				47D3C8B225DF09C90037B10B /* ClientDetailView.swift in Sources */,
+				47D3C8B325DF09C90037B10B /* CoreDataStack.swift in Sources */,
+				47D3C8B425DF09C90037B10B /* AddressHelperView.swift in Sources */,
+				47D3C8B525DF09C90037B10B /* main.swift in Sources */,
+				47D3C8B625DF09C90037B10B /* Mapping+CoreDataClass.swift in Sources */,
+				47D3C8B725DF09C90037B10B /* Utils.swift in Sources */,
+				47D3C8B825DF09C90037B10B /* Document+CoreDataClass.swift in Sources */,
+				47D3C8B925DF09C90037B10B /* ClientListViews.swift in Sources */,
+				47D3C8BA25DF09C90037B10B /* AppDelegate.swift in Sources */,
+				47D3C8BB25DF09C90037B10B /* ConfigService.swift in Sources */,
+				47D3C8BC25DF09C90037B10B /* FilteredListView.swift in Sources */,
+				47D3C8BD25DF09C90037B10B /* ClientSegmentationItemsView.swift in Sources */,
+				47D3C8BE25DF09C90037B10B /* Constants.swift in Sources */,
+				47D3C8BF25DF09C90037B10B /* LaunchScreenViewModel.swift in Sources */,
+				47D3C8C025DF09C90037B10B /* String + helpers.swift in Sources */,
+				47D3C8C125DF09C90037B10B /* SceneDelegate.swift in Sources */,
+				47D3C8C225DF09C90037B10B /* SearchBar.swift in Sources */,
+				47D3C8C325DF09C90037B10B /* NSManagedObject + helpers.swift in Sources */,
+				47D3C8C425DF09C90037B10B /* SignatureView.swift in Sources */,
+				47D3C8C525DF09C90037B10B /* Queries+CoreDataClass.swift in Sources */,
+				47D3C8C625DF09C90037B10B /* LaunchScreenView.swift in Sources */,
+				47D3C8C725DF09C90037B10B /* UserDefaultUtils.swift in Sources */,
+				47D3C8C825DF09C90037B10B /* FileManagement.swift in Sources */,
+				47D3C8C925DF09C90037B10B /* ClientListsViewModel.swift in Sources */,
+				47D3C8CA25DF09C90037B10B /* Publisher + helpers.swift in Sources */,
+				47D3C8CB25DF09C90037B10B /* CoreDataUtils.swift in Sources */,
+				47D3C8CC25DF09C90037B10B /* AddressHelperViewModel.swift in Sources */,
+				47D3C8CD25DF09C90037B10B /* ClientSegmentationItemsViewModel.swift in Sources */,
+				47D3C8CE25DF09C90037B10B /* TabBarContainerView.swift in Sources */,
+				47D3C8CF25DF09C90037B10B /* ClientViewModel.swift in Sources */,
+				47D3C8D025DF09C90037B10B /* NetworkingService.swift in Sources */,
+				47D3C8D125DF09C90037B10B /* UserDefaultKey.swift in Sources */,
+				47D3C8D225DF09C90037B10B /* ClientList+CoreDataClass.swift in Sources */,
+				47D3C8D325DF09C90037B10B /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47D3C8E425DF09CD0037B10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D3C8E525DF09CD0037B10B /* ClientSegmentationView.swift in Sources */,
+				47D3C8E625DF09CD0037B10B /* ClientView.swift in Sources */,
+				47D3C8E725DF09CD0037B10B /* NewClientViewModel.swift in Sources */,
+				47D3C8E825DF09CD0037B10B /* Account+CoreDataClass.swift in Sources */,
+				47D3C8E925DF09CD0037B10B /* CodingUserInfoKey + helpers.swift in Sources */,
+				47D3C8EA25DF09CD0037B10B /* ClientsFetchViewModel.swift in Sources */,
+				47D3C8EB25DF09CD0037B10B /* IM_DigitalCard.xcdatamodeld in Sources */,
+				47D3C8EC25DF09CD0037B10B /* ClientSegmentationViewModel.swift in Sources */,
+				47D3C8ED25DF09CD0037B10B /* Client.swift in Sources */,
+				47D3C8EE25DF09CD0037B10B /* SOQLQueries.swift in Sources */,
+				47D3C8EF25DF09CD0037B10B /* ClientService.swift in Sources */,
+				47D3C8F025DF09CD0037B10B /* Translation+CoreDataClass.swift in Sources */,
+				47D3C8F125DF09CD0037B10B /* NewClientView.swift in Sources */,
+				47D3C8F225DF09CD0037B10B /* DrawingView.swift in Sources */,
+				47D3C8F325DF09CD0037B10B /* TranslationService.swift in Sources */,
+				47D3C8F425DF09CD0037B10B /* ClientListService.swift in Sources */,
+				47D3C8F525DF09CD0037B10B /* GlobalSyncService.swift in Sources */,
+				47D3C8F625DF09CD0037B10B /* ClientDetailViewModel.swift in Sources */,
+				47D3C8F725DF09CD0037B10B /* ClientListsView.swift in Sources */,
+				47D3C8F825DF09CD0037B10B /* ClientDetail.swift in Sources */,
+				47D3C8F925DF09CD0037B10B /* ClientDetailView.swift in Sources */,
+				47D3C8FA25DF09CD0037B10B /* CoreDataStack.swift in Sources */,
+				47D3C8FB25DF09CD0037B10B /* AddressHelperView.swift in Sources */,
+				47D3C8FC25DF09CD0037B10B /* main.swift in Sources */,
+				47D3C8FD25DF09CD0037B10B /* Mapping+CoreDataClass.swift in Sources */,
+				47D3C8FE25DF09CD0037B10B /* Utils.swift in Sources */,
+				47D3C8FF25DF09CD0037B10B /* Document+CoreDataClass.swift in Sources */,
+				47D3C90025DF09CD0037B10B /* ClientListViews.swift in Sources */,
+				47D3C90125DF09CD0037B10B /* AppDelegate.swift in Sources */,
+				47D3C90225DF09CD0037B10B /* ConfigService.swift in Sources */,
+				47D3C90325DF09CD0037B10B /* FilteredListView.swift in Sources */,
+				47D3C90425DF09CD0037B10B /* ClientSegmentationItemsView.swift in Sources */,
+				47D3C90525DF09CD0037B10B /* Constants.swift in Sources */,
+				47D3C90625DF09CD0037B10B /* LaunchScreenViewModel.swift in Sources */,
+				47D3C90725DF09CD0037B10B /* String + helpers.swift in Sources */,
+				47D3C90825DF09CD0037B10B /* SceneDelegate.swift in Sources */,
+				47D3C90925DF09CD0037B10B /* SearchBar.swift in Sources */,
+				47D3C90A25DF09CD0037B10B /* NSManagedObject + helpers.swift in Sources */,
+				47D3C90B25DF09CD0037B10B /* SignatureView.swift in Sources */,
+				47D3C90C25DF09CD0037B10B /* Queries+CoreDataClass.swift in Sources */,
+				47D3C90D25DF09CD0037B10B /* LaunchScreenView.swift in Sources */,
+				47D3C90E25DF09CD0037B10B /* UserDefaultUtils.swift in Sources */,
+				47D3C90F25DF09CD0037B10B /* FileManagement.swift in Sources */,
+				47D3C91025DF09CD0037B10B /* ClientListsViewModel.swift in Sources */,
+				47D3C91125DF09CD0037B10B /* Publisher + helpers.swift in Sources */,
+				47D3C91225DF09CD0037B10B /* CoreDataUtils.swift in Sources */,
+				47D3C91325DF09CD0037B10B /* AddressHelperViewModel.swift in Sources */,
+				47D3C91425DF09CD0037B10B /* ClientSegmentationItemsViewModel.swift in Sources */,
+				47D3C91525DF09CD0037B10B /* TabBarContainerView.swift in Sources */,
+				47D3C91625DF09CD0037B10B /* ClientViewModel.swift in Sources */,
+				47D3C91725DF09CD0037B10B /* NetworkingService.swift in Sources */,
+				47D3C91825DF09CD0037B10B /* UserDefaultKey.swift in Sources */,
+				47D3C91925DF09CD0037B10B /* ClientList+CoreDataClass.swift in Sources */,
+				47D3C91A25DF09CD0037B10B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +1327,94 @@
 			};
 			name = Release;
 		};
+		47D3C8DD25DF09C90037B10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031280353E0E256D10EEC718 /* Pods-IM_DigitalCard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IM_DigitalCard/Preview Content\"";
+				DEVELOPMENT_TEAM = S2G93GEHC6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IM_DigitalCard/setup/Plist/Info_dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.levana.IM.digitalCard.IM-DigitalCardDEV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47D3C8DE25DF09C90037B10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IM_DigitalCard/Preview Content\"";
+				DEVELOPMENT_TEAM = S2G93GEHC6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IM_DigitalCard/setup/Plist/Info_dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.levana.IM.digitalCard.IM-DigitalCardDEV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47D3C92425DF09CD0037B10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031280353E0E256D10EEC718 /* Pods-IM_DigitalCard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IM_DigitalCard/Preview Content\"";
+				DEVELOPMENT_TEAM = S2G93GEHC6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IM_DigitalCard/setup/Plist/Info_full.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.levana.IM.digitalCard.IM-DigitalCardFULL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47D3C92525DF09CD0037B10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BBAEAF43788106E06CE087 /* Pods-IM_DigitalCard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IM_DigitalCard/Preview Content\"";
+				DEVELOPMENT_TEAM = S2G93GEHC6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IM_DigitalCard/setup/Plist/Info_full.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.levana.IM.digitalCard.IM-DigitalCardFULL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -898,6 +1432,24 @@
 			buildConfigurations = (
 				16DB0E042598A34C005A4261 /* Debug */,
 				16DB0E052598A34C005A4261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47D3C8DC25DF09C90037B10B /* Build configuration list for PBXNativeTarget "IM_DigitalCard DEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D3C8DD25DF09C90037B10B /* Debug */,
+				47D3C8DE25DF09C90037B10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47D3C92325DF09CD0037B10B /* Build configuration list for PBXNativeTarget "IM_DigitalCard FULL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D3C92425DF09CD0037B10B /* Debug */,
+				47D3C92525DF09CD0037B10B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
